@@ -1,0 +1,5 @@
+﻿@CalculationAPI_HostAddress = https://localhost:7006
+
+GET {{CalculationAPI_HostAddress}}/api/calculator
+
+###
