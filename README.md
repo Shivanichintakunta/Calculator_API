@@ -1,1 +1,1 @@
-# Calculator_API
+Web API built using ASP.NET Core,By implementing the endpoints to Add,Update,Retrieve and Delete the calculator records.The Calculation Entity Contains the properties like Id,Operand1,Opernad2,Operator, and Result.
