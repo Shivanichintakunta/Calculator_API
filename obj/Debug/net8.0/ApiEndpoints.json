@@ -1,34 +1,54 @@
 [
   {
-    "ContainingType": "CalculationAPI.Controllers.CalculatorController",
-    "Method": "GetCalculations",
-    "RelativePath": "api/Calculator",
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Calculators",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CalculationAPI.Models.Calculation, CalculationAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "CalculationAPI.Controllers.CalculatorController",
-    "Method": "PostCalculations",
-    "RelativePath": "api/Calculator",
-    "HttpMethod": "POST",
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Get",
+    "RelativePath": "api/Calculators/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "c",
-        "Type": "CalculationAPI.Models.Calculation",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CalculationAPI.Models.Calculation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "CalculationAPI.Controllers.CalculatorController",
-    "Method": "UpdateCalculation",
-    "RelativePath": "api/Calculator/{id}",
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Update",
+    "RelativePath": "api/Calculators/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -39,7 +59,7 @@
         "IsRequired": true
       },
       {
-        "Name": "c",
+        "Name": "calculator",
         "Type": "CalculationAPI.Models.Calculation",
         "IsRequired": true
       }
@@ -47,9 +67,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CalculationAPI.Controllers.CalculatorController",
-    "Method": "DeleteCalculation",
-    "RelativePath": "api/Calculator/{id}",
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Delete",
+    "RelativePath": "api/Calculators/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -63,19 +83,127 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CalculationAPI.Controllers.CalculatorController",
-    "Method": "GetCalculationsById",
-    "RelativePath": "api/Calculator/id:int",
-    "HttpMethod": "GET",
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Add",
+    "RelativePath": "api/Calculators/add",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "a",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "b",
+        "Type": "System.Double",
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CalculationAPI.Models.Calculation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Divide",
+    "RelativePath": "api/Calculators/divide",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "b",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CalculationAPI.Models.Calculation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Multiply",
+    "RelativePath": "api/Calculators/multiply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "b",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CalculationAPI.Models.Calculation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
+    "Method": "Subtract",
+    "RelativePath": "api/Calculators/subtract",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "b",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CalculationAPI.Models.Calculation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

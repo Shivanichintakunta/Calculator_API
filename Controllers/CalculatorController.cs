@@ -1,136 +1,98 @@
 ﻿using CalculationAPI.Data;
 using CalculationAPI.Models;
-using Microsoft.AspNetCore.Http;
+using CalculatorWebAPI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CalculationAPI.Controllers
+namespace CalculatorWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalculatorController : ControllerBase
+    public class CalculatorsController : ControllerBase
     {
-        private readonly CalculatorContext dbContext;
+        private readonly CalculatorContext _context;
 
-        public CalculatorController(CalculatorContext dbContext)
+        public CalculatorsController(CalculatorContext context)
         {
-            this.dbContext = dbContext;
+            _context = context;
         }
-        //Get Method
+
+        [HttpPost("add")]
+        public async Task<ActionResult<Calculation>> Add(double a, double b)
+        {
+            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "+", Result = a + b };
+            _context.Calculations.Add(calc);
+            await _context.SaveChangesAsync();
+            return Ok(calc);
+        }
+
+        [HttpPost("subtract")]
+        public async Task<ActionResult<Calculation>> Subtract(double a, double b)
+        {
+            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "-", Result = a - b };
+            _context.Calculations.Add(calc);
+            await _context.SaveChangesAsync();
+            return Ok(calc);
+        }
+
+        [HttpPost("multiply")]
+        public async Task<ActionResult<Calculation>> Multiply(double a, double b)
+        {
+            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "*", Result = a * b };
+            _context.Calculations.Add(calc);
+            await _context.SaveChangesAsync();
+            return Ok(calc);
+        }
+
+        [HttpPost("divide")]
+        public async Task<ActionResult<Calculation>> Divide(double a, double b)
+        {
+            if (b == 0) return BadRequest("Cannot divide by zero.");
+            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "/", Result = a / b };
+            _context.Calculations.Add(calc);
+            await _context.SaveChangesAsync();
+            return Ok(calc);
+        }
+
         [HttpGet]
-        public IActionResult GetCalculations()
+        public async Task<ActionResult<IEnumerable<Calculation>>> GetAll()
         {
-            var allCalculations = dbContext.Calculations.ToList();
-            return Ok(allCalculations);
+            return await _context.Calculations.ToListAsync();
         }
 
-        //Get Method with Id
-        [HttpGet]
-        [Route("id:int")]
-        public IActionResult GetCalculationsById(int id) {
-            var Calculation_result = dbContext.Calculations.Find(id);
-            if (Calculation_result is null)
-            {
-                return NotFound();
-            }
-            return Ok(Calculation_result);
-        }
-
-        //Post Method
-        [HttpPost]
-        public IActionResult PostCalculations([FromBody] Calculation c)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Calculation>> Get(int id)
         {
-            var CalculationEntity = new Calculation()
-            {
-                Operand1 = c.Operand1,
-                Operand2 = c.Operand2,
-                Operator = c.Operator
-            };
-
-            switch (CalculationEntity.Operator)
-            {
-                case "+":
-                    CalculationEntity.Result = CalculationEntity.Operand1 + CalculationEntity.Operand2;
-                    break;
-                case "-":
-                    CalculationEntity.Result = CalculationEntity.Operand1 - CalculationEntity.Operand2;
-                    break;
-                case "*":
-                    CalculationEntity.Result = CalculationEntity.Operand1 * CalculationEntity.Operand2;
-                    break;
-                case "/":
-                    if (CalculationEntity.Operand2 == 0)
-                        return BadRequest("Cannot Divide By Zero");
-                    CalculationEntity.Result = CalculationEntity.Operand1 / CalculationEntity.Operand2;
-                    break;
-                default:
-                    return BadRequest("Invalid Operator.Use +, -, *, /. ");
-            }
-            dbContext.Calculations.Add(CalculationEntity);
-            dbContext.SaveChanges();
-            return Ok(CalculationEntity);
-            //return CreatedAtAction(nameof(GetCalculations), new { Id = CalculationEntity.Id }, CalculationEntity);
+            var calc = await _context.Calculations.FindAsync(id);
+            if (calc == null) return NotFound();
+            return calc;
         }
 
-        //Put Method
         [HttpPut("{id}")]
-        public IActionResult UpdateCalculation(int id,[FromBody] Calculation c) {
-            var calculation_update = dbContext.Calculations.Find(id);
-            if(calculation_update is null)
-            {
-                return NotFound();
-            }
-            calculation_update.Operand1 = c.Operand1;
-            calculation_update.Operand2 = c.Operand2;
-            calculation_update.Operator = c.Operator;
-
-            switch (calculation_update.Operator)
-            {
-                case "+":
-                    calculation_update.Result = calculation_update.Operand1 + calculation_update.Operand2;
-                    break;
-                case "-":
-                    calculation_update.Result = calculation_update.Operand1 - calculation_update.Operand2;
-                    break;
-                case "*":
-                    calculation_update.Result = calculation_update.Operand1 * calculation_update.Operand2;
-                    break;
-                case "/":
-                    if (calculation_update.Operand2 == 0)
-                        return BadRequest("Cannot Divide By Zero");
-                    calculation_update.Result = calculation_update.Operand1 / calculation_update.Operand2;
-                    break;
-                default:
-                    return BadRequest("Invalid Operator.Use +, -, *, /. ");
-            }
-            dbContext.SaveChanges();
-            return Ok(calculation_update);
-
+        public async Task<IActionResult> Update(int id, Calculation calculator)
+        {
+            if (id != calculator.Id) return BadRequest();
+            _context.Entry(calculator).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteCalculation(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var delete_Calculation = dbContext.Calculations.Find(id);
-            if (delete_Calculation is null)
-            {
-                return NotFound();
-            }
-            dbContext.Calculations.Remove(delete_Calculation);
-            dbContext.SaveChanges();
-            return Ok(delete_Calculation);
+            var calc = await _context.Calculations.FindAsync(id);
+            if (calc == null) return NotFound();
+            _context.Calculations.Remove(calc);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
-
     }
-        
 }
 
 
-   
+
 
 
