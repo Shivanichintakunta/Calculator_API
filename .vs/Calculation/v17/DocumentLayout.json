@@ -1,29 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\",
+  "WorkspaceRootPath": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\solera\\calculation\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\solera\\calculation\\calculationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:calculationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\calculationdto\\calculationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:calculationdto\\calculationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\solera\\calculation\\models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Shivani_DB/True/SqlTable/dbo.Calculations.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\solera\\calculation\\data\\calculatorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:data\\calculatorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\solera\\calculation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\solera\\calculation\\migrations\\20250702141331_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\data\\calculatorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:data\\calculatorcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\calculationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:calculationapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\calculationapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:calculationapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|c:\\users\\shivani.c\\desktop\\calci\\calculation\\migrations\\20250702141331_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D64EFF72-537A-45E7-A81A-0A07BA5324A1}|CalculationAPI.csproj|solutionrelative:migrations\\20250702141331_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,17 +45,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Calculations.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Shivani_DB/True/SqlTable/dbo.Calculations.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Shivani_DB/True/SqlTable/dbo.Calculations.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-04T09:26:51.372Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CalculationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\CalculationDTO\\CalculationRequest.cs",
+              "RelativeDocumentMoniker": "CalculationDTO\\CalculationRequest.cs",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\CalculationDTO\\CalculationRequest.cs",
+              "RelativeToolTip": "CalculationDTO\\CalculationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T05:44:13.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CalculationAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\CalculationAPI.csproj",
+              "RelativeDocumentMoniker": "CalculationAPI.csproj",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\CalculationAPI.csproj",
+              "RelativeToolTip": "CalculationAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-04T05:43:50.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CalculationAPI.http",
-              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\CalculationAPI.http",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\CalculationAPI.http",
               "RelativeDocumentMoniker": "CalculationAPI.http",
-              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\CalculationAPI.http",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\CalculationAPI.http",
               "RelativeToolTip": "CalculationAPI.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2025-07-02T16:52:24.76Z"
             },
@@ -52,34 +96,34 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CalculatorController.cs",
-              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Controllers\\CalculatorController.cs",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Controllers\\CalculatorController.cs",
               "RelativeDocumentMoniker": "Controllers\\CalculatorController.cs",
-              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Controllers\\CalculatorController.cs",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Controllers\\CalculatorController.cs",
               "RelativeToolTip": "Controllers\\CalculatorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAowA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T14:15:17.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Program.cs",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T14:13:55.802Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "20250702141331_InitialMigration.cs",
-              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Migrations\\20250702141331_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Migrations\\20250702141331_InitialMigration.cs",
               "RelativeDocumentMoniker": "Migrations\\20250702141331_InitialMigration.cs",
-              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Migrations\\20250702141331_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Migrations\\20250702141331_InitialMigration.cs",
               "RelativeToolTip": "Migrations\\20250702141331_InitialMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -87,25 +131,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CalculatorContext.cs",
-              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Data\\CalculatorContext.cs",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Data\\CalculatorContext.cs",
               "RelativeDocumentMoniker": "Data\\CalculatorContext.cs",
-              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Data\\CalculatorContext.cs",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Data\\CalculatorContext.cs",
               "RelativeToolTip": "Data\\CalculatorContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T14:11:10.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Calculation.cs",
-              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Models\\Calculation.cs",
+              "DocumentMoniker": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Models\\Calculation.cs",
               "RelativeDocumentMoniker": "Models\\Calculation.cs",
-              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Solera\\Calculation\\Models\\Calculation.cs",
+              "ToolTip": "C:\\Users\\Shivani.C\\Desktop\\Calci\\Calculation\\Models\\Calculation.cs",
               "RelativeToolTip": "Models\\Calculation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T14:09:35.349Z"
             }

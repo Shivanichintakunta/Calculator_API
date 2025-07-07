@@ -1,4 +1,5 @@
-﻿using CalculationAPI.Data;
+﻿using CalculationAPI.CalculationDTO;
+using CalculationAPI.Data;
 using CalculationAPI.Models;
 using CalculatorWebAPI;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CalculationAPI.CalculationDTO;
 
 namespace CalculatorWebAPI.Controllers
 {
@@ -21,40 +23,103 @@ namespace CalculatorWebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<ActionResult<Calculation>> Add(double a, double b)
+        public IActionResult Addition([FromBody] CalculationRequest request)
         {
-            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "+", Result = a + b };
-            _context.Calculations.Add(calc);
-            await _context.SaveChangesAsync();
-            return Ok(calc);
+            double result = request.Firstnum + request.Secondnum;
+
+            var calculation = new Calculation
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "+",
+                Result = result
+            };
+
+            _context.Calculations.Add(calculation);
+            _context.SaveChanges();
+
+            return Ok(new
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "+",
+                Result = result
+            });
         }
 
         [HttpPost("subtract")]
-        public async Task<ActionResult<Calculation>> Subtract(double a, double b)
+        public IActionResult Subtract([FromBody] CalculationRequest request)
         {
-            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "-", Result = a - b };
-            _context.Calculations.Add(calc);
-            await _context.SaveChangesAsync();
-            return Ok(calc);
+            double result = request.Firstnum - request.Secondnum;
+
+            var calculation = new Calculation
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "-",
+                Result = result
+            };
+
+            _context.Calculations.Add(calculation);
+            _context.SaveChanges();
+
+            return Ok(new
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "-",
+                Result = result
+            });
         }
 
         [HttpPost("multiply")]
-        public async Task<ActionResult<Calculation>> Multiply(double a, double b)
+        public IActionResult Multiply([FromBody] CalculationRequest request)
         {
-            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "*", Result = a * b };
-            _context.Calculations.Add(calc);
-            await _context.SaveChangesAsync();
-            return Ok(calc);
+            double result = request.Firstnum * request.Secondnum;
+
+            var calculation = new Calculation
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "*",
+                Result = result
+            };
+
+            _context.Calculations.Add(calculation);
+            _context.SaveChanges();
+
+            return Ok(new
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "*",
+                Result = result
+            });
         }
 
         [HttpPost("divide")]
-        public async Task<ActionResult<Calculation>> Divide(double a, double b)
+        public IActionResult Divide([FromBody] CalculationRequest request)
         {
-            if (b == 0) return BadRequest("Cannot divide by zero.");
-            var calc = new Calculation { Operand1 = a, Operand2 = b, Operator = "/", Result = a / b };
-            _context.Calculations.Add(calc);
-            await _context.SaveChangesAsync();
-            return Ok(calc);
+            double result = request.Firstnum / request.Secondnum;
+
+            var calculation = new Calculation
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "/",
+                Result = result
+            };
+
+            _context.Calculations.Add(calculation);
+            _context.SaveChanges();
+
+            return Ok(new
+            {
+                Operand1 = request.Firstnum,
+                Operand2 = request.Secondnum,
+                Operator = "/",
+                Result = result
+            });
         }
 
         [HttpGet]

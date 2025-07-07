@@ -3,3 +3,11 @@
 GET {{CalculationAPI_HostAddress}}/api/calculator
 
 ###
+
+GET {{CalculationAPI_HostAddress}}/api/calculators
+
+###
+
+GET {{CalculationAPI_HostAddress}}/api/calculators
+
+###

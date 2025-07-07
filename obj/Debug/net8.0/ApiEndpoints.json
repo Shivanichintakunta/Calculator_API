@@ -84,34 +84,19 @@
   },
   {
     "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
-    "Method": "Add",
+    "Method": "Addition",
     "RelativePath": "api/Calculators/add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "a",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Double",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "CalculationAPI.CalculationDTO.CalculationRequest",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CalculationAPI.Models.Calculation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
@@ -122,27 +107,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "a",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Double",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "CalculationAPI.CalculationDTO.CalculationRequest",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CalculationAPI.Models.Calculation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
@@ -153,27 +123,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "a",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Double",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "CalculationAPI.CalculationDTO.CalculationRequest",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CalculationAPI.Models.Calculation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CalculatorWebAPI.Controllers.CalculatorsController",
@@ -184,26 +139,11 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "a",
-        "Type": "System.Double",
-        "IsRequired": false
-      },
-      {
-        "Name": "b",
-        "Type": "System.Double",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "CalculationAPI.CalculationDTO.CalculationRequest",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CalculationAPI.Models.Calculation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   }
 ]
